@@ -46,7 +46,7 @@ for (i = 0; i < arr2.length; i++) {
 }
 for (i = 0; i < arr2.length; i++) {
     for (j = 0; j < arr2[i].length; j++){
-        arr2[i][j] = Math.floor(Math.random() * 10 - 15);
+        arr2[i][j] = Math.floor(Math.random() * 20 - 15);
         document.write(arr2[i][j] + ' ');
     }
     document.write('<br />');
@@ -88,34 +88,3 @@ for (i=0; i<arr2.length; i++){
     document.write(arr2[i]  + '<br />') ;
 
 }
-
-// LECTION_06 функции 
-
-
-// function doMath(x, y, z) {
-//     if (!x || !y || !z) {
-//         return "ERROR";
-//         return;
-//     }
-//     if ( z == '+') {
-//         return x + y;
-//     } else if ( z == '-') {
-//         return x - y;
-//     } else if ( z == '*') {
-//         return x * y;
-//     } else if ( z == '/') {
-//         return x / y;
-//     } else if ( z == '%') {
-//         return x % y;
-//     } else if ( z == '^') {
-//         return Math.pow( x,  y) ;
-//     } else {
-//         return 'NOT KNOWN OPERATION'
-//     }
-// }
-
-// x = +prompt('Enter x');
-// z = prompt('Enter ZNAK')
-// y = +prompt('Enter y');
-// console.log( x, z, y )
-// console.log( doMath(x, y, z) )
