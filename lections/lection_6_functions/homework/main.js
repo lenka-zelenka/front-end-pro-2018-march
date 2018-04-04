@@ -2,6 +2,28 @@
 
 // 1) Написать функцию заполнения двумерного массива. Имя произвольное.
 
+function randomFillArray (array){
+    if (Array.isArray(array) ) {
+        for (var i = 0; i < array.length ; i++) {
+            for (var j = 0; j < array[i].length; j++) {
+                array[i][j] = Math.floor(Math.random() * 100)
+            }
+        }
+        return array;
+    } else {
+        return console.log("Вы не отправили массив")
+    }
+}
+
+n=4;
+m=5;
+myArray = new Array(n);
+for(i = 0; i< myArray.length; i++){
+    myArray[i] = new Array(m);
+}
+
+randomFillArray(myArray);
+
 // 2) написать функцию, которая примет как аргумент(параметр) два массива и сравнить суммы всех ЧИСЛОВЫХ элементов. Тот массив, сумма которого большая - должен вернутся функцией.
 
 
