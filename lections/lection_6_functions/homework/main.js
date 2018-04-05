@@ -26,6 +26,29 @@ randomFillArray(myArray);
 
 // 2) написать функцию, которая примет как аргумент(параметр) два массива и сравнить суммы всех ЧИСЛОВЫХ элементов. Тот массив, сумма которого большая - должен вернутся функцией.
 
+A1 = [12,3,4,5,56]
+A2 = [0,0,4,4,4,4,4,4,4,4,4]
+
+function sumArray (arr) {
+    var sum = 0;
+    for(i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+function compareArrays (arr1, arr2) {
+    if (sumArray(arr1) > sumArray(arr2)) {
+        console.log('arr1 > arr2');
+        return arr1;
+    } else if(sumArray(arr1) < sumArray(arr2) ) {
+        console.log('arr2 > arr1');
+        return arr2;
+    } else {
+        console.log('arr2 == arr1');
+    }
+}
+compareArrays(A1, A2)
 
 // # Лекция
 
