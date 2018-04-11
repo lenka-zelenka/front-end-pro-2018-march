@@ -54,11 +54,17 @@ function mul (x, y){
     return x * y;
 }
 function power (x, y){
-    var res = x;
-    for (var i = 1; i < y; i++){
-        res *= x;
+    if (y <= 0 ){
+        return 'error';
+    } else if ( y == 0 ) {
+        return 1;
+    } else {
+        var res = x;
+        for (var i = 1; i < y; i++){
+            res *= x;
+        }
+        return res;
     }
-    return res;
 }
 
 // `doFunction(16, -23, mul); // 16*(-23)`
