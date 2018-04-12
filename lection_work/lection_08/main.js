@@ -33,19 +33,30 @@ function convert(obj) {
     }
     return newObj;
 }
-// не влияет на исходный объект
-function convertlection(source) {
-    var newObj = {};
-    for (var key in source) {
-        if (typeof source[key] == 'object') {
-            var innerSourse = source[key];
-            for (innerKey in innerSourse) {
-                newObj[innerKey] = innerSourse[innerKey];
-            }
+// не влияет на исходный объект (не дописала в лекционном материале)
+// function convertlection(source) {
+//     var newObj = {};
+//     for (var key in source) {
+//         if (typeof source[key] == 'object') {
+//             var innerSourse = source[key];
+//             for (innerKey in innerSourse) {
+//                 newObj[innerKey] = innerSourse[innerKey];
+//             }
             
-        } else {
-            newObj[key] =  source[key];
-        }
+//         } else {
+//             newObj[key] =  source[key];
+//         }
+//     }
+//     return newObj;
+// }
+
+function square (x) { return x * x; }
+
+console.log(map(square, arr1));
+function map(fn, array) {
+    var newArr = [];
+    for(key in array ){
+        newArr 
     }
-    return newObj;
+    return newArr;
 }
