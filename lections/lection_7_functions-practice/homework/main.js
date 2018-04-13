@@ -9,7 +9,7 @@
 arr1 = [1,2,2,3,4]
 arr2 = [1,2,5,888,9,0,2,3,4]
 arr3 = [1,9,6,78,2,2,3,4]
-
+separator = '<br />* * * * * * * * * *<br />'
 
 function getMiddleElement(arr){
     res = [];
@@ -30,16 +30,24 @@ function MiddleElements() {
     return resArray;
 }
 
-document.write(MiddleElements(arr1, arr2, arr3))
+document.write("Arrays: <br />" +  arr1 + "<br />" + arr2 + "<br />" + arr3  + "<br />");
+document.write("Middle elements : ", MiddleElements(arr1, arr2, arr3));
 
 
 // 2) Написать функцию, которая получает 3 аргумента: два числа и функцию. 
 //  Произвести вызов переданной функции с двумя аргументами числами.
 // `doFunction(2, 3, power);` в ответе должны получить 8, как 2 в степени 3.
 
+function doSmt(x, y, fn) {
+    arguments,length;
+    if (arguments.length == 2 ) {
+        return factorial(x);
+    } else{ return fn(x, y); }
+    
+}
 
-
-
+document.write(separator);
+document.write("result of Task 2: " + doSmt(4, 3, power));
 
 
 // 3) Из п.2 реализовать функции sum, div, mul, power
@@ -67,6 +75,20 @@ function power (x, y){
     }
 }
 
+function factorial(a) {
+    var fact = 1;
+    for (i=1; i <= a; i++ ){
+        fact *= i;
+    }
+    return fact;
+}
+
+
+
 // `doFunction(16, -23, mul); // 16*(-23)`
 
-// 4) Из п.2, если количество числовых аргументов равно единице и переданная функция `factorial` - реализовать расчет факторикала. `doFunction(6, factorial);`, в ответе поулчаем 6! = 720. // arguments.length и typeof
+// 4) Из п.2, если количество числовых аргументов равно единице и переданная функция `factorial`
+//  - реализовать расчет факторикала. `doFunction(6, factorial);`, в ответе поулчаем 6! = 720. 
+// arguments.length и typeof
+
+
