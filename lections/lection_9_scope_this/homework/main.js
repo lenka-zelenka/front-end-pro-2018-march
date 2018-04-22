@@ -11,12 +11,21 @@
 // Далее в любом порядке можно вызывать комбинации функций 
 
 var obj = {
-    copy: function(buffer){ typeof buffer == 'string' ? this[buffer] = buffer : null },
-    clear: function(){ this.result = 0},
-    doFunction: function(x,y, func) {return this.result = func(x,y)},
+    copy: function(buffer){ 
+        typeof buffer == 'string' ? this[buffer] = buffer : null;
+        return this;    
+    },
+    clear: function(){ 
+        this.result = 0
+        return this;
+     },
+    doFunction: function(x,y, func) {
+        this.result = func(x,y);
+        return this;
+    },
     result: 0,
 };
-obj.doFunction(3,4, mul);
+obj.doFunction(3, 4, mul);
 
 
 // ## <hr />
@@ -24,6 +33,13 @@ obj.doFunction(3,4, mul);
 
 
 // 2) Дана строка вида &#39;var_text_hello&#39;. Сделайте из него текст &#39;varTextHello&#39;.
+var str = 'var_text_hello';
+
+var newstr = str.split('_'); // var, text, hello
+for (var i =1; i < newstr.length; i++) {
+    newstr[i] = newstr[i].charAt(0).toUpperCase() + newstr[i].substr(1).toLowerCase()
+}
+newstr = newstr.join('')
 
 // ## <hr />
 
@@ -33,36 +49,19 @@ obj.doFunction(3,4, mul);
 // возвращать true или false.<hr >
 // ` inArray('foo', ['sjhfnaof', 'affooasf', 'dfhdfhdfh'])` должно вернуть `true`, т.к. в `affooasf` есть совпадение.
 
+function inArray(string, arr) {
+    var isPresent = false;
+    for (key in arr) {
+        if(arr[key].indexOf(string) !== -1 ) {
+            isPresent = true;
+        }
+    }
+    return isPresent;    
+}
 
+inArray('foo', ['sjhfnaof', 'affooasf', 'dfhdfhdfh']);
 
-// ## Лекция
-
-// 1) Задан обьект с любым количеством свойств. Одно из свойств является функция `renderObject()`, которая описана в window.
-// При вызове метода `obj.renderObject()` -> выводит в document всё содержимое объекта, кроме самого метода `renderObject`
-
-
-//         obj = { x:10, y: 20 }
-//         obj.renderObject() -> x:10, y: 20
-
-
-// 2) в обьекте `data` существует метод `addRecord`, который аргументами получает любой набор объектов. Метод `addRecord` добавляет все свойства переданных объектов в `data`.
-
-
-//         data = {
-//             addRecord: function(){},
-//             p: 600,
-//             str: 'hello',
-//             y: -50
-//         }
-//         data.addRecord({x: 10}, {y: 20}, {z: 30, x: 50});
-//         data.x // 50
-//         data.y // 20
-//         data.z // 30
-//         data.p // 600
-//         data.str // 'hello'
-
-// 3) В метод `addRecord` добавляется последний необязательный аргумент `flag`, который указывает приоритет присвоения свойств с одинаковым названием.
-// Если `true` - берется свойство из первоначального объекта `this`, если `false` - берется свойство из `arguments`.  По умолчанию `flag = false;`
+// функции для первого задания
 
 function sum (x, y){
     return x + y;
