@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lection Work 13</title>
+    <script src="main.js"></script>
+
+    <style>
+        html, body{
+            height: 100%;
+        }
+        .block {
+            position: relative;
+            top: 0;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            background-color: #fafafa; 
+            
+            transition: .5s;
+        }
+        .bottom {
+            top: calc(100% - 150px);
+            background-color: red            
+        }
+    </style>
+</head>
+<body style="font-family: monospace">
+    <div class="block">1</div>
+    <div class="block">2</div>
+    <div class="block">3</div>
+    <div class="block">4</div>
+    <div class="block">5</div>
+</body>
+</html>
