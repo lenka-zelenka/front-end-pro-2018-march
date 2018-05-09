@@ -86,19 +86,16 @@ function SuperMath(){
     var  x, y, znak;
 }
 
-SuperMath.prototype.checkZnak = function (znak){
-    if (znak == '+' || znak == '-' || znak ==  '/' || znak ==   '*' || znak == '%'){
-        this.check({x: this.x, y: this.y, znak: this.znak})
-    } else {
-        this.input();
-    }
-}
+
 SuperMath.prototype.input = function(){
     alert('Введите новые данные');
     this.x =  +prompt('Введите х: ')
     this.y =  +prompt('Введите у: ')
-    this.znak = prompt('Введите знак: ')
-    this.checkZnak(this.znak)
+    do {
+        this.znak = prompt("Введите знак: ");
+    } while ( this.znak !== '+' && this.znak!== '-' && this.znak !== '*' && this.znak !== '/' && this.znak !== '%')
+
+    this.check( {x: this.x, y:this.y, znak: this.znak})
 }
 
 SuperMath.prototype.check = function(obj) {
