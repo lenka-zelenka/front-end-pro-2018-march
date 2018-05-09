@@ -51,8 +51,8 @@ Calculator2.prototype.Square = function(square) {
 
 // 3 уровень
 function Calculator3(x) {
-    arr = [];
-    arr.length = 200;
+    this.arr = [];
+    this.arr.length = 200;
 }
 Calculator3.prototype = Object.create(Calculator2.prototype);
 
@@ -72,3 +72,63 @@ var p4 = new Calculator4();
 p4.arr = [1,2,3,4];
 p4.reInit()
 p4.Sum(2,5)
+
+
+document.write('<br>')
+// 2) Создать класс SuperMath. Добавить к экземпляру метод - check(obj), 
+// параметр obj которого имеет свойства X, Y, znak. 
+// Метод должен подтвердить у пользователя хочет ли он произвести действие znak c Х и У. 
+// Если -да, сделать мат действие znak(которое описано в прототипе),
+//  иначе - запросить ввод новых данных через метод input() класса SuperMath.
+// Пример обекта: `obj = { X:12, Y:3, znak: “/”}`, возможные варианты znak=>  `+ - / * %`.
+// При вводе znak нужно сделать проверку корректности ввода на возможные математические действия
+function SuperMath(){
+    var  x, y, znak;
+}
+
+SuperMath.prototype.checkZnak = function (znak){
+    if (znak == '+' || znak == '-' || znak ==  '/' || znak ==   '*' || znak == '%'){
+        this.check({x: this.x, y: this.y, znak: this.znak})
+    } else {
+        this.input();
+    }
+}
+SuperMath.prototype.input = function(){
+    alert('Введите новые данные');
+    this.x =  +prompt('Введите х: ')
+    this.y =  +prompt('Введите у: ')
+    this.znak = prompt('Введите знак: ')
+    this.checkZnak(this.znak)
+}
+
+SuperMath.prototype.check = function(obj) {
+    this.x = obj.x;
+    this.y = obj.y;
+    this.znak = obj.znak;
+
+    var response = confirm("Вы хотите произвести действие " + this.znak + ' c числами' + this.x + ' и '+ this.y + ' ?');
+    if (response){
+        document.write("Результат: ")
+        if (this.znak == '+'){
+            document.write(this.x + this.y)
+        } 
+        if (this.znak == '-'){
+            document.write(this.x - this.y)
+        } 
+        if (this.znak == '/'){
+            document.write(this.x / this.y)
+        } 
+        if (this.znak == '*'){
+            document.write(this.x * this.y)
+        } 
+        if (this.znak == '%'){
+            document.write(this.x % this.y)
+        } 
+    } else {
+        this.input()
+    }
+}
+
+obj = {x: 4, y: 2, znak: '+'};
+var s = new SuperMath();
+s.check(obj)
