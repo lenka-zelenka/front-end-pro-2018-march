@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.input {
+    border: 1px solid rgba(0,0,0, .54);
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 16px;
+    margin:  40px 0;
+}
+
+.giagram {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 200px;
+    margin: 40px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    overflow: hidden;
+}   
+.diagram-comission {
+    position: absolute;
+    height: 4%;
+    width: 100%;    
+    background-color: rgb(252, 49, 49);
+    bottom: 50%;
+
+}
+.diagram-range {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(7, 121, 45);
+    bottom: 0;
+}
+
+.left-col{ 
+    float: left;
+    width: 200px;
+}
+.right-col {
+    float: left;
+    width: 200px
+}
