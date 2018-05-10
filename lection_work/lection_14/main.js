@@ -6,26 +6,27 @@ window.onload =  function(){
         button = document.querySelector('#toggle-block');
 
     block_1.addEventListener('mousemove', showCoordinates);
-    button.addEventListener('mousemove', toggleBlock);
+    // button.addEventListener('mousemove', toggleBlock);
     // block.addEventListener('mousemove', changeColor)
     var step = 4, 
         direction = 1;
     setInterval( function(){
+        if(block_2.offsetLeft >= (window.innerWidth - block_2.offsetWidth) ||
+            block_2.offsetLeft <= 0 && direction == -1) {
+                direction = -direction;
+            }
         block_2.style.left = block_2.offsetLeft + (step*direction) + 'px';                
-        if(block_2.offsetLeft == window.innerWidth - block_2.offsetWidth || block_2.offsetLeft <= 0) {
-            direction = -direction;
-        }
+        console.log(block_2.offsetLeft, window.innerWidth)
     }, 10)
 }
 
 function showCoordinates(event) {
-
     this.innerHTML = 'x:' + event.offsetX + '<br> y:'+ event.offsetY;
 }
 
-function toggleBlock (event) {
+// function toggleBlock (event) {
 
-}
+// }
 // function changeColor(event){
 
 // }
