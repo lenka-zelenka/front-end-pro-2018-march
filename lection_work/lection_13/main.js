@@ -5,7 +5,7 @@
 window.onload = function(){
     // var blocks = document.querySelectorAll(".block");
     // var counter = 0;
-    var i = 0;
+    // var i = 0;
 
     // setInterval(function(){
     //     blocks[i].classList.toggle('bottom');
@@ -20,7 +20,7 @@ window.onload = function(){
     // }, 1000 );
 
     var inputValue = document.getElementsByTagName('input');
-    var textareaValue;
+    // var textareaValue;
     // for (i =0; i < inputValue.length; i++){
     //     textareaValue += inputValue[i].value + ',';
     // }
