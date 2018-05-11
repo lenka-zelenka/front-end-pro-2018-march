@@ -16,7 +16,7 @@ input {
     margin:  40px 0;
 }
 
-.giagram {
+.diagram {
     display: block;
     position: relative;
     width: 50px;
@@ -24,7 +24,6 @@ input {
     margin: 40px;
     border: 1px solid #000;
     border-radius: 2px;
-    overflow: hidden;
 }   
 .diagram-comission {
     position: absolute;

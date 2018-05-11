@@ -11,7 +11,6 @@ window.onload = function(){
         drawDiagram (this.value);
         setValue (range, this.value) 
     } )
-       
 }
 function setValue (input, value) {
     input.value = value;
@@ -19,9 +18,9 @@ function setValue (input, value) {
 function drawDiagram (value) {
     var comission = document.querySelector('.diagram-comission'),
         range = document.querySelector('.diagram-range');
-
-    range.style.height = value - getComissionAmount(value) + '%';
-    comission.style.bottom = value - getComissionAmount(value) + '%';
+        
+    range.style.height = value + '%';
+    comission.style.bottom = value + '%';
     comission.style.height = getComissionAmount(value) + '%';
 }
 
