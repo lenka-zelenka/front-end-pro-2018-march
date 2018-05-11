@@ -33,7 +33,7 @@ window.onload =  function(){
     }
     setInterval( function(){
         block_2.style.backgroundColor =  getColor();
-    },500)
+    },2000)
 }
 
 function showCoordinates(event) {
