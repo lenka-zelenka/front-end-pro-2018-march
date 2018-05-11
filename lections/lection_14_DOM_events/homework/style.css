@@ -40,6 +40,14 @@ input {
     background-color: rgb(7, 121, 45);
     bottom: 0;
 }
+.diagram-text {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100px;
+    z-index: 1;
+    font-size: 10px
+}
 
 .left-col{ 
     float: left;
