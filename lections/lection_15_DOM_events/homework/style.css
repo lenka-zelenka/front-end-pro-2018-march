@@ -8,7 +8,8 @@
     height: 100px;
     background-color: #c094f1;
     position: fixed;    
-    top: calc(100vh - 100px);
+    top: calc(50vh - 50px);
     /* bottom: 0; */
-    left: 0;
+    left: calc(50vw - 50px);
+    transition: all .1s;
 }
