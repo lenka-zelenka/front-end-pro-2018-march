@@ -1,0 +1,38 @@
+{
+    "goods": {
+        "item-1": {
+            "id": "item-1",
+            "title": "Банан",
+            "price": 10,
+            "imageSrc" : "https://zakroma.sumy.ua/image/cache/catalog/frukti/banan-500x500.jpg"
+        },
+        "item-2": {
+            "id": "item-2",
+            "title": "Клубника",
+            "price": 50,
+            "imageSrc" : "http://suseky.com/wp-content/uploads/2016/12/firestock_strawbery_06102013.jpg"
+            
+        },
+        "item-3": {
+            "id": "item-3",
+            "title": "Персик",
+            "price": 80,
+            "imageSrc" : "http://img2.uaua.info/uploads/d8/30/69/d830693a-5897-4086-b0ce-161e5e3bb08e_610x375_fit.jpg"
+            
+        },
+        "item-4": {
+            "id": "item-4",
+            "title": "Арбуз",
+            "price": 5,
+            "imageSrc" : "https://www.voprosy-kak-i-pochemu.ru/wp-content/uploads/watermelon.jpg"
+            
+        },
+        "item-5": {
+            "id": "item-5",
+            "title": "Ананас",
+            "price": 45,
+            "imageSrc" : "https://telegraf.com.ua/files/2015/09/114701_or.jpg"
+            
+        }
+    }
+}

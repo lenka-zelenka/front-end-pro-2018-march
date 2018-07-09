@@ -1,11 +1,3 @@
-# Изучить материал
-
-+ https://tproger.ru/articles/localstorage/
-+ https://developer.mozilla.org/ru/docs/Web/API/Storage
-+ https://developer.mozilla.org/ru/Add-ons/WebExtensions/API/cookies
-+ https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON
-
-# Практика
 
 1) Эмулируем работу корзины. В правом верхнем углу список набранных товаров (определяем по id).
 Товары расположены в ряд по центру. Создаем 5 разных типов товаров.

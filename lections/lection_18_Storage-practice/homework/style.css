@@ -1,0 +1,29 @@
+.card .card-image {
+    max-height: 200px;
+    overflow: hidden;
+}
+.card .card-image img {
+    width: auto;
+    height: 100px;
+    margin: 0 auto;
+}
+.basket {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+}
+.basket.show {
+    display: block;
+}
+.basket .collection .collection-item {
+    position: relative;
+    padding-right: 42px;
+}
+
+.remove-item {
+    position: absolute;
+    top: 8px;
+    right: 8px;    
+}
