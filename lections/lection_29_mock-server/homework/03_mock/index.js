@@ -32,6 +32,14 @@ app
 	.route('/user/:userId')
 	.get($data.getUser);
 
+app
+	.route('/users/')
+	.get($data.getAllUsers);
+
+app
+	.route('/users/:userId')
+	.get($data.getUsers);
+
 app.route('/list')
 	.get($data.list);
 

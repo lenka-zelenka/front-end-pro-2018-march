@@ -46,7 +46,9 @@ function getUser(req, res) {
 			let blocked = {
 				status: "blocked"
 			}
-			if (response.success == "false") { return res.json(blocked) }
+			if (response.success == "false") {
+				return res.json(blocked)
+			}
 
 			return response;
 		})
@@ -54,6 +56,26 @@ function getUser(req, res) {
 			res.json(response);
 		});
 }
+
+function getUsers(req, res) {
+	let path = pathConcat('api' + req.url + '/' + req.method.toLowerCase() + '.json'),
+		servicePromise = filereader(fs, path);
+
+	servicePromise
+		.then((response) => {
+			res.json(response);
+		});
+}
+function getAllUsers(req, res) {
+	let path = pathConcat('api' + req.url + '/' + req.method.toLowerCase() + '.json'),
+		servicePromise = filereader(fs, path);
+
+	servicePromise
+		.then((response) => {
+			res.json(response);
+		});
+}
+
 
 function list(req, res) {
 	let path = pathConcat('api' + req.url + '/' + req.method.toLowerCase() + '.json'),
@@ -68,4 +90,11 @@ function list(req, res) {
 }
 
 
-module.exports = { getBuildings, pathConcat, getUser, list };
+module.exports = {
+	getBuildings,
+	pathConcat,
+	getUser,
+	getUsers,
+	getAllUsers,
+	list
+};
