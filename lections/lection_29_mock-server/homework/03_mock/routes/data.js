@@ -67,13 +67,22 @@ function getUsers(req, res) {
 		});
 }
 function getAllUsers(req, res) {
-	let path = pathConcat('api' + req.url + '/' + req.method.toLowerCase() + '.json'),
+	let path = pathConcat('api' + req.url + '/' + req.method.toLowerCase()),
 		servicePromise = filereader(fs, path);
 
 	servicePromise
 		.then((response) => {
 			res.json(response);
 		});
+
+		// fs.readdir(folder, function (err, files) {
+		// 	if (err) return console.error(err)
+		// 	files.forEach(function(file) {
+		// 			if (path.extname(file) === ext) {
+		// 					console.log(file)
+		// 			}
+		// 	})
+		// })
 }
 
 
