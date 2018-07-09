@@ -1,0 +1,15 @@
+{
+    "menu": [
+        {"title": "Home"},
+        {"title": "Settings"},
+        {
+            "title": "Goods",
+            "submenu": [
+                {"title": "Apple"},
+                {"title": "Samsung"}
+            ]
+        },
+        {"title": "Accounts"},
+        {"title": "Member"}
+    ]
+}

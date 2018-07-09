@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Work 19</title>
+<style>
+    .error {
+        border-color: red
+    }
+    p.error {
+        display: none;
+        color: red;
+    }
+    p.error.display{
+        display: block;
+    }
+</style>
+
+</head>
+
+<body style="font-family: monospace">
+    <form id="user-data" method="POST" >
+        <input type="text" name="name" id="user-name" placeholder="Your name" required>
+        <input type="number" name="age" id="user-age" placeholder="Your age" required>
+        <button type="submit" id="send-data">Send</button>
+        <p class="error"></p>
+    </form>
+<script src="main.js"></script>
+</body>
+
+</html>
